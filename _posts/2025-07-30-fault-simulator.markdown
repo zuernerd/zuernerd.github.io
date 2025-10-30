@@ -7,13 +7,13 @@ tags: [hardware-security, cybersecurity, embedded-systems, fault-simulation, sec
 ---
 ## Introduction
 
-If you're developing embedded systems, you've probably heard about fault injection attacks. These are attacks where an adversary deliberately corrupts a microcontroller's operation—think voltage glitching during a boot sequence to bypass authentication, or electromagnetic pulses to flip bits in cryptographic operations. The results can be devastating: bypassed security checks, extracted encryption keys, or completely compromised devices.
+If you're developing embedded systems, you've probably heard about fault injection attacks. These are attacks where an adversary deliberately corrupts a microcontroller's operation. Think voltage glitching during a boot sequence to bypass authentication, or electromagnetic pulses to flip bits in cryptographic operations. The results can be devastating: bypassed security checks, extracted encryption keys, or completely compromised devices.
 
 Traditionally, testing your code against these attacks meant investing in extensive hardware: signal generators, oscilloscopes, EM probes, and specialized glitching equipment that can easily cost thousands of dollars. Even then, setting up repeatable tests is time-consuming and requires significant expertise.
 
 Software-based fault injection tools change this entirely. Instead of physical glitching, they simulate attack effects by manipulating code execution, flipping memory bits, or skipping instructions within a controlled environment.
 
-The advantages are game-changing: software simulation runs orders of magnitude faster than hardware testing, letting you iterate on countermeasures in seconds rather than hours. You can also systematically test hundreds of different fault scenarios automatically—far more than is practical with physical equipment.
+The advantages are game-changing: software simulation runs orders of magnitude faster than hardware testing, letting you iterate on countermeasures in seconds rather than hours. You can also systematically test hundreds of different fault scenarios automatically. Far more than is practical with physical equipment.
 
 ## What Is Fault Injection?
 
@@ -59,11 +59,11 @@ These examples highlight how simulation can help you test and refine such softwa
 
 ## Why simulate Fault Injection?
 
-Simulating fault injection offers significant advantages across development, testing, and security evaluation. One of the main motivations is cost and reproducibility—hardware fault injection setups are expensive and not easily repeatable. Simulation enables automated, repeatable testing at a much lower cost.
+Simulating fault injection offers significant advantages across development, testing, and security evaluation. One of the main motivations is cost and reproducibility. Hardware fault injection setups are expensive and not easily repeatable. Simulation enables automated, repeatable testing at a much lower cost.
 
 Designing software countermeasures is also particularly challenging. Even if a countermeasure is implemented, it might still be bypassed, and the nature of fault effects is not always evident at the level of a high-level programming language. Developers must often analyze the behavior at the assembly level to truly understand vulnerabilities. Countermeasures tend to grow more complex as attack methods evolve, and compilers may even unintentionally undermine these protections.
 
-Compared to hardware testing, simulation enables faster development cycles. There's no need to launch a new test campaign for every code update—something especially valuable when working with non-reprogrammable memory like masked ROM. It also encourages rapid experimentation with new ideas. Moreover, simulation avoids the risk of physically damaging hardware, such as through overheating or overvolting a development board.
+Compared to hardware testing, simulation enables faster development cycles. There's no need to launch a new test campaign for every code update, something especially valuable when working with non-reprogrammable memory like masked ROM. It also encourages rapid experimentation with new ideas. Moreover, simulation avoids the risk of physically damaging hardware, such as through overheating or overvolting a development board.
 
 Simulations are also easier to run systematically. Instead of manually performing each test, you can automate hundreds of fault scenarios in a controlled and reproducible way. These tests can target specific fault models, allowing for thorough and targeted analysis. On the other hand, hardware-based setups often generate faults based on the characteristics of the physical equipment used. As a result, the exact fault behavior may not always be clear, consistent, or even fully understood.
 
@@ -92,7 +92,7 @@ Once the fault simulator is installed according to the README, we can start our 
 
 `cp content/src/examples/main_0.c content/src/main.c`
 
-This is a very basic C example demonstrating a branching decision. The code defines two possible execution paths—one for success and one for failure—using macros provided by the simulator:
+This is a very basic C example demonstrating a branching decision. The code defines two possible execution paths, one for success and one for failure, using macros provided by the simulator:
 
 ```c
 int main()
@@ -124,7 +124,7 @@ void start_success_handling(void)
 }
 ```
 
-In this example, `DECISION_DATA` is evaluated. If the condition is met, a success message is printed and `__SET_SIM_SUCCESS();` is called—this marks the simulation as successful. Otherwise, the program follows a failure path and calls `__SET_SIM_FAILED();`, indicating an expected failure. Under normal conditions, only the failure marker should be triggered. If a fault is injected that alters the control flow—e.g., by corrupting the conditional branch—then the success path may be erroneously taken. This makes it an ideal case for testing whether such a fault could be exploited.
+In this example, `DECISION_DATA` is evaluated. If the condition is met, a success message is printed and `__SET_SIM_SUCCESS();` is called. This marks the simulation as successful. Otherwise, the program follows a failure path and calls `__SET_SIM_FAILED();`, indicating an expected failure. Under normal conditions, only the failure marker should be triggered. If a fault is injected that alters the control flow e.g., by corrupting the conditional branch, then the success path may be erroneously taken. This makes it an ideal case for testing whether such a fault could be exploited.
 
 We start a single glitch attack with analysis using the following command:
 
@@ -384,7 +384,7 @@ _<sub> Ghidra plugin to visualize the fault trace </sub>_
 
 ## Limitations
 
-There are several limitations to keep in mind when using this type of simulation. First, it’s a model—meaning it doesn’t capture real analog behavior such as timing glitches or race conditions. As a result, it may miss certain real-world interactions, like peripheral behaviour or faults triggered by precise timing conditions. The simulation covers only CPU and memory corruption and does not extend to other components. It also doesn't replace physical testing when it comes to side-channel or timing attacks. Although similar simulation-based approaches exist for evaluating side-channel vulnerabilities, they come with their own limitations and trade-offs.
+There are several limitations to keep in mind when using this type of simulation. First, it’s a model, meaning it doesn’t capture real analog behavior such as timing glitches or race conditions. As a result, it may miss certain real-world interactions, like peripheral behaviour or faults triggered by precise timing conditions. The simulation covers only CPU and memory corruption and does not extend to other components. It also doesn't replace physical testing when it comes to side-channel or timing attacks. Although similar simulation-based approaches exist for evaluating side-channel vulnerabilities, they come with their own limitations and trade-offs.
 
 ## Future improvements/ideas
 

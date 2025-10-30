@@ -16,7 +16,7 @@ At the time, I was unaware that Joe FitzPatrick was presenting a talk at Black H
 
 When the infamous Bloomberg article "[The Big Hack](https://www.bloomberg.com/news/articles/2018-10-04/the-big-hack-the-software-side-of-china-s-supply-chain-attack)" surfaced in 2018, detailing alleged hardware implants found in server supply chains, I was reminded of my earlier project. Although I lacked the time to revisit it due to university commitments, the concept remained in the back of my mind.  
 
-Now, I’m revisiting this idea using a more recent AVM model: the FRITZ!WLAN Mesh Repeater 1200. I no longer have access to the original 1750E, but the 1200 shares a similar construction and serves as a suitable platform to continue exploring the concept. Beyond simply recreating the original implant, I also want to see whether this kind of attack is still possible on newer hardware. This article documents that process — from the updated design to its broader implications for device security.
+Now, I’m revisiting this idea using a more recent AVM model: the FRITZ!WLAN Mesh Repeater 1200. I no longer have access to the original 1750E, but the 1200 shares a similar construction and serves as a suitable platform to continue exploring the concept. Beyond simply recreating the original implant, I also want to see whether this kind of attack is still possible on newer hardware. This article documents that process from the updated design to its broader implications for device security.
 
 ## Step 1: Initial Exploration
 
@@ -149,7 +149,7 @@ The point isn’t just about reverse shells or specific tools. It’s about phys
 
 Sure, the attack has practical constraints: it requires physical access, and in more paranoid environments, a reverse SSH connection might get flagged. But in many situations, it’s more than enough.
 
-This is not hypothetical — it’s practical, replicable, and entirely overlooked in many deployed systems.
+This is not hypothetical ... it’s practical, replicable, and entirely overlooked in many deployed systems.
 Honestly, this made me think twice about buying used network gear 😉.  
 
 ---
