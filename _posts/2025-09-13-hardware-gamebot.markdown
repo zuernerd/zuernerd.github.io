@@ -6,7 +6,7 @@ categories: [blog]
 tags: [cheat, game-cheating, opencv, hardware]
 ---
 ## Introduction
- A while ago, I came across a [video](https://www.youtube.com/watch?v=QpvwjC1_Luo) on YouTube about using image recognition on a Raspberry Pi to build an aimbot. What caught my attention wasn’t the aimbot itself - it was the clever workaround to modern anti-cheat systems. These systems have become so sophisticated that people now build "fully external" solutions, meaning nothing runs on the game PC at all. Instead, everything happens on an external device like a Raspberry Pi.
+ A while ago, I came across a [video](https://www.youtube.com/watch?v=QpvwjC1_Luo) on YouTube about using image recognition on a Raspberry Pi to build an aimbot. What caught my attention wasn’t the aimbot itself, but the workaround to modern anti-cheat systems. These systems have become so advanced that people now build "fully external" solutions, meaning nothing runs on the game PC at all. Instead, everything happens on an external device like a Raspberry Pi.
 
 That concept got me curious. I'm not into cheating, especially in competitive games like shooters. But the technical challenge intrigued me. I wanted to explore the idea, starting with something simpler and more nostalgic. That’s when I thought of World of Warcraft, a game I poured countless hours into during my youth.
 
