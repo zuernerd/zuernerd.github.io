@@ -3,6 +3,6 @@ layout: page
 title: About
 permalink: /about/
 ---
-Hi, I’m a Senior Embedded Security Engineer specialized in fault injection attacks, secure firmware testing, and SoC security evaluation. 
+I'm a Senior Embedded Security Engineer working professionally with fault injection attacks, secure firmware testing, and SoC security evaluation.
 
-I started this blog to share insights, tools, and experiments from my technical journey. 
+This blog documents my side projects and experiments. The technical work here represents personal interests and independent research, separate from my day job.
