@@ -62,7 +62,7 @@ To connect the logic analyzer to the flash chip, you can use SOIC clips. I've tr
 
 ## Sniffing the Flash
 
-Let's start sniffing. I used the custom version of PulseView by SiSpeed as their driver is not upstream yet. It works just like general PulseView, which has its quirks.
+Let's start sniffing. I used the custom version of PulseView by SiPeed as their driver is not upstream yet. It works just like general PulseView, which has its quirks.
 
 I named all four channels for later analysis, powered on the switch, waited until it booted and the password screen appeared on UART, and then started a capture with 4 channels at 200 MHz sample rate and 500M samples. That's about 2.5 seconds and enough.
 
@@ -442,6 +442,6 @@ This project demonstrates that even without debug access, creative hardware-leve
 
 I'll be honest: I'm probably not the best reverse engineer, and a more skilled person might have solved this purely through static analysis. At the time I started this, I wasn't even fully understanding how the banking mechanism worked. I was working in a team environment and wanted to get results quickly, so I tried to achieve the goals with the techniques I knew best: hardware analysis and dynamic observation.
 
-This was also my first experiment with the SLogic analyzer, and so far I'm pretty happy to finally have a low-cost capable hardware device for my hobby projects. The Saleae Logic is simply too expensive for hobby use, but I do wish the PulseView software had better performance. Since there's a [PR](https://github.com/sigrokproject/libsigrok/pull/275#issuecomment-3664700490) to get the SiSpeed driver upstream, I'm confident that I'll benefit from ongoing PulseView development rather than being stuck with some fork, as is the case with other logic analyzers that have appeared on the market.
+This was also my first experiment with the SLogic analyzer, and so far I'm pretty happy to finally have a low-cost capable hardware device for my hobby projects. The Saleae Logic is simply too expensive for hobby use, but I do wish the PulseView software had better performance. Since there's a [PR](https://github.com/sigrokproject/libsigrok/pull/275#issuecomment-3664700490) to get the SiPeed driver upstream, I'm confident that I'll benefit from ongoing PulseView development rather than being stuck with some fork, as is the case with other logic analyzers that have appeared on the market.
 
 Overall, instruction tracing via SPI flash sniffing proved to be an effective technique when traditional debugging methods aren't available. It's another tool in the hardware hacker's arsenal for understanding embedded systems.
