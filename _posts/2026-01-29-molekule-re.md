@@ -180,7 +180,7 @@ pip3 install boto3 awscrt awsiotsdk
 
 ### Exploitation Script
 
-The following proof-of-concept demonstrates how trivial this vulnerability is to exploit. This is production-ready Python code - no advanced techniques, no vulnerability research expertise required. Anyone with basic Python knowledge could do this:
+The following proof-of-concept demonstrates how trivial this vulnerability is to exploit. No advanced techniques, no vulnerability research expertise required. Anyone with basic Python knowledge could do this:
 
 ```python
 #!/usr/bin/env python3
