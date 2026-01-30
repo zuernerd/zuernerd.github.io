@@ -6,9 +6,11 @@ categories: [blog]
 tags: [cybersecurity, iot-security, vulnerability-report, aws, mqtt, molekule]
 ---
 
-## Summary
+
 ![Molekule Air purifier](/assets/molekule_title.png)  
 
+
+## Summary
 **Security Vulnerability Disclosure**
 
 **Vendor:** Molekule Group, Inc.  
