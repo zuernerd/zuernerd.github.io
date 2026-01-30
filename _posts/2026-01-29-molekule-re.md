@@ -369,5 +369,5 @@ The disclosure process for this vulnerability was... interesting. While Molekule
 - **19-11-2025:** Molekule asked for more specific details on how credentials were obtained.
 - **20-11-2025:** I provided them with detailed information about the hardcoded credentials in the Android app bundle.
 - **06-01-2026:** I asked for a status update. Radio silence.
-- **25-01-2026:** Still no answer. Testing shows they appear to have fixed their AWS policy, as the PoC no longer works. However, since they stopped communicating with me entirely, I haven't investigated the fix in detail or verified its completeness.
+- **30-01-2026:** Still no answer. Testing shows they appear to have fixed their AWS policy, as the PoC no longer works. However, since they stopped communicating with me entirely, I haven't investigated the fix in detail or verified its completeness.
 - **30-01-2026:** Public disclosure (this post).
