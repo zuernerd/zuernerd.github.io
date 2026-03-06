@@ -12,7 +12,7 @@ If you're tinkering around with embedded devices, having debug access is like ha
 
 That's what this blog article is about. I'll discuss how instruction tracing of an external SPI flash helped me better understand the code flow of firmware running on a simple 8051 core.
 
-I originally did this last summer during a group effort on the [IoT Hacker Hideout Discord server](https://discord.gg/EJRPfr7Q), where people of different skill levels work together on the same devices. If you're new to IoT hacking or want to improve your skills, I highly recommend joining the server. Originally, I used the Saleae Logic 8 Pro analyzer, which I'm a huge fan of, but the price point is a huge con for hobbyists. That's why the new [SLogic16U3](https://wiki.sipeed.com/hardware/en/logic_analyzer/slogic16u3/Introduction.html) got my interest. I'll use it during this article to test it and see if it fits my needs.
+I originally did this last summer during a group effort on the [IoT Hacker Hideout Discord server](https://discord.gg/4FY23znPTf), where people of different skill levels work together on the same devices. If you're new to IoT hacking or want to improve your skills, I highly recommend joining the server. Originally, I used the Saleae Logic 8 Pro analyzer, which I'm a huge fan of, but the price point is a huge con for hobbyists. That's why the new [SLogic16U3](https://wiki.sipeed.com/hardware/en/logic_analyzer/slogic16u3/Introduction.html) got my interest. I'll use it during this article to test it and see if it fits my needs.
 
 ## The Target
 
